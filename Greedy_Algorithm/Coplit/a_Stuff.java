@@ -107,23 +107,28 @@ public class a_Stuff {
         int min = 0;
         // 최대 위치
         int max = stuff.length-1;
+        // 또는 카운트 ~> 단 while 의 등호를 바꿔야함 ~> 인덱스가 같아지는 경우 때문 && 조건도 바꿔야함 if에 들어가버리면 안됨 하나만 나오잖아
+        int count = 0;
         // 최소가 최대를 넘을 때까지
-        while (min < max) {
+        while (min <= max) {
             // 만약 최소위치 인덱스의 요소 + 최대위치 인덱스의 요소 가 <= limit 이면
             // 두개를 한꺼번에 옮길 수 있는 상황
-            if (stuff[min] + stuff[max] <= limit) {
+            if (stuff[min] + stuff[max] <= limit && min != max) {
                 // 해당 상황이면 제일 처음 요소와 제일 마지막 요소의 다음 인덱스 요소를 찾아야함
                 min++;
                 max--;
                 // 하나를 옮겼으니 box 에 1을 더해줌
                 box++;
+                count++;
             } else { // 위에 해당하지 않는다면 우선적으로 가장 높은 요소부터 옮겨져야함
                 // 우선적으로 가장 높은 요소부터 옮겨져야함
                 max--;
+                count++;
             }
         }
         // 전체 요소 중 if에 걸린 요소를 빼주면 총 박스 개수임
-        return stuff.length-box;
+//        return stuff.length-box;
+        return count;
     }
 }
 // 흐름
