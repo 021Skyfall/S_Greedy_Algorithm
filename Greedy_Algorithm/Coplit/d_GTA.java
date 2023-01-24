@@ -4,7 +4,7 @@ public class d_GTA {
     public static void main(String[] args) {
         System.out.println(ocean(50, new int[]{10, 20, 50}));
     }
-    public static long ocean(int target, int[] type) {
+    private static long ocean(int target, int[] type) {
         // 다이나믹 프로그래밍의 기초적인 문제
         // 쉽게 말해서 50원을 10원 20원 50원을 사용해서 거슬러 줄 때의 경우의 수는 몇 번이냐고 묻는 것
         // ex) 50 = 50
