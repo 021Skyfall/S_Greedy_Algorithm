@@ -52,6 +52,7 @@ public class a_rockPaperScissors {
 * 나올 수 있는 가위 바위 보의 총 경우의 수
 * 중복순열로
 * 횟수가 3회라고 가정
+* 빈칸은 null
 *
 * result = []
 *
