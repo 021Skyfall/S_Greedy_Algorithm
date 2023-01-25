@@ -2,7 +2,6 @@ package Math_Algorithm.Coplit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 public class b_Chicken {
@@ -72,6 +71,7 @@ public class b_Chicken {
                 // bucket 에 해당 재료 삽입 ~> 재귀 돌면서 이어 붙여줘야하기 때문에 새로운 배열 생성
                 Integer[] concat = Arrays.copyOf(bucket,bucket.length+1);
                 // 계속 크기 한칸 씩 늘려주면서 다음 인덱스에 사용한 재료 삽입
+                // 마찬가지로 clone 으로 깊은 복사 가능
                 concat[concat.length-1] = use.get(i);
 
                 // 재귀 호출

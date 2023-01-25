@@ -35,7 +35,7 @@ public class a_rockPaperScissors {
             String cur = rps[i];
             // 반복 할 때마다 가중치 담을 배열 생성
             // 로직 실행시 이전 배열을 복사 + 길이를 한 칸 늘려줌
-            // 또한 이 방법은 깊은복사로 새로운 배열에 값을 담는것
+            // 이런식으로 안늘려주고 깊은 복사를 통해 통으로 옮겨줄 수 있음 주로 clone 메소드 사용
             String[] concat = Arrays.copyOf(play,play.length+1);
             // 늘려준 자리에 최근에 뽑아온 rps 의 요소 추가
             concat[concat.length-1] = cur;
