@@ -96,6 +96,6 @@ public class e_Dishes {
 * stack = [e,f]
 * search([e,f],3,{e,f,k},[[e,f,k]])
 *
-* ... 반복 되면서 아래로 흐르고 result 리턴
+* ... 반복 되면서 아래로 흐르고 result 로 리턴
 * ! push 와 pop 을 이용한 멱집합 구현 <- 이게 제일 중요
  */
